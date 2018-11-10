@@ -1,5 +1,8 @@
 let path = require('path');
 
+function resolve(dir) {
+  return path.join(__dirname, '../src', dir)
+}
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
@@ -11,7 +14,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-      components: './src/components'
+      components: resolve('components'),
+      utils: resolve('utils'),
+      page: resolve('page')
     }
   },
   module: {
@@ -34,10 +39,10 @@ module.exports = {
             }
           },
           {
-            loader: 'sass-loader'
+            loader: 'postcss-loader'
           },
           {
-            loader: 'postcss-loader'
+            loader: 'sass-loader'
           }
         ]
       },

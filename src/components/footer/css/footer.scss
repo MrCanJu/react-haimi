@@ -1,0 +1,47 @@
+.footer{
+  width: 100%;
+  height: .49rem;
+  border-top: 1px solid #e5e5e5;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  & > a{
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all .5s ease;
+    span{
+      color: #999;
+      font-size: .12rem;
+      transition: all .5s ease;
+    }
+    &.active span{
+      color: #801a2a;
+    }
+  }
+  .index{
+    background: url('../img/home.png') no-repeat center 0/ 35%;
+    &.active{
+      background-image: url('../img/home2.png');
+    }
+  }
+  .category{
+    background: url('../img/category.png') no-repeat center 0/ 35%;
+    &.active{
+      background-image: url('../img/category2.png');
+    }
+  }
+  .cart{
+    background: url('../img/cart.png') no-repeat center 0/ 35%;
+    &.active{
+      background-image: url('../img/cart2.png');
+    }
+  }
+  .user{
+    background: url('../img/user.png') no-repeat center 0/ 35%;
+    &.active{
+      background-image: url('../img/user.png');
+    }
+  }
+}

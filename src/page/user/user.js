@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Footer from "components/footer/footer.js";
 
-class Category extends Component {
+class uesr extends Component {
   render() {
     return (
       <div>
-        分类
+        我的
         <Footer></Footer>
       </div>
     );
   }
 }
 
-export default Category;
+export default uesr;
