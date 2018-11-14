@@ -10,6 +10,13 @@ module.exports = merge(baseWebpackConfig, {
     compress: true,
     hot: true,
     port: 3000,
+
+    proxy: {
+      '/api': {
+        target: 'http://m.haimi.com',
+        changeOrigin: true
+      }
+    },
     historyApiFallback: true
   },
   mode: 'development',
@@ -22,4 +29,4 @@ module.exports = merge(baseWebpackConfig, {
       inject: true
     })
   ]
-})
+});

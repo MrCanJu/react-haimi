@@ -1,16 +1,10 @@
-import $ from 'jquery';
-export default function(opt) {
-  return new Promise(function(resolve, reject) {
-    $.ajax({
-      url: opt.url,
-      data: opt.data,
-      dataType: 'jsonp',
-      success(res) {
-        resolve(res);
-      },
-      error(err) {
-        reject(err);
-      }
-    })
-  })
-}
+import axios from 'axios';
+export default {
+  get(url, params) {
+    return axios.get(url, {params}).then(res => res.data);
+  },
+  post(url, params) {
+    return axios.post(url, params).then(res => res.data);
+  }
+};
+
